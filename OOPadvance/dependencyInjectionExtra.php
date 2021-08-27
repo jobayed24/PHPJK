@@ -4,15 +4,17 @@
 interface BaseStorage{
     function setFileName($fn);
     function writeData($data);
-    function appendData($data);
+    
 }
 
 
 class Storage implements BaseStorage{
     private $fn;
-    function __construct($fn)
+    private $mode;
+    function __construct($fn,$mode=null)
     {
         $this->setFileName($fn);
+        $this->mode($mode);
     }
     function setFileName($fn)
     {
@@ -20,24 +22,30 @@ class Storage implements BaseStorage{
     }
     function writeData($data)
     {
-        file_put_contents($this->fn,$data);
+        file_put_contents($this->fn,$data,$this->mode);
     }
-    function appendData($data)
-    {
-        $this->data=$data;
+    function mode($mode){
+        $this->mode=$mode;
     }
+    
 }
 
-class Result{
-    function finalResult($filename,$data){
-        $storage=new Storage($filename);
+
+
+
+class DataManager{
+    function saveData(BaseStorage $storage,$data){
         $storage->writeData($data);
+       
     }
 }
 
-$r=new Result();
-$r->finalResult("tmt/new.txt","jobayed");
 
+$s=new Storage("tmt/new.txt");
+$s->mode(FILE_APPEND);
+$dm=new DataManager();
+
+$dm->saveData($s,"\n 3 my name is JK ");
 
 
 
