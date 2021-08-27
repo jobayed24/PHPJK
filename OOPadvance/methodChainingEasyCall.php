@@ -49,3 +49,6 @@ $su->search("hello")
 ->stringLowerCase()
 ->stringUperCase()
 ->echo();
+
+
+///finish 
