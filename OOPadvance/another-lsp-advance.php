@@ -1,7 +1,7 @@
 <?php
 
 interface Bird{
-   
+    function eat();
     function sleep();
 }
 
