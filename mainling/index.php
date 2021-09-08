@@ -31,7 +31,7 @@ try{
 
     //Content ...
     $pm->isHTML(true);
-    $pm->Subject="hlw kmn acho tmr ki khobor?";
+    $pm->Subject="oi kmn acos?";
     $pm->Body="shakawat kmn ascos?";
     $pm->AltBody="Allah amar pase thak";
 
