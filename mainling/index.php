@@ -26,13 +26,13 @@ try{
 
     ///Recieption......
     $pm->setFrom("jkhouse117@gmail.com");
-    $pm->addAddress("jkhouse117@gmail.com");
+    $pm->addAddress("mrishafayet003@gmail.com");
 
 
     //Content ...
     $pm->isHTML(true);
     $pm->Subject="oi kmn acos?";
-    $pm->Body="shakawat kmn ascos?";
+    $pm->Body="safayet ki khobor ki obosta?";
     $pm->AltBody="Allah amar pase thak";
 
     ///sending critiria
