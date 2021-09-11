@@ -1,5 +1,12 @@
 <?php
 
+///adapter pattern comply interface one class which recieve interface as a object 
+//and which function i wanna to use in class with different method name just use adapterClass
+//which only recieve differnt method .... to adapt it 
+
+
+///////////////////two pin soket to three pin soket plugin ................... 
+
 interface PaymentProcess{
     function sendPayment($amount);
 
